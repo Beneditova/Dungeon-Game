@@ -1,0 +1,20 @@
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.exe.config
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.exe
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.pdb
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\bin\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\bin\Debug\Dungeon.Core.pdb
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csproj.CopyComplete
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.exe
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.pdb
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.exe.config
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.exe
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\bin\Debug\ConsoleDungeon.pdb
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\bin\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\bin\Debug\Dungeon.Core.pdb
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.csproj.CopyComplete
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.exe
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\ConsoleDungeon\obj\Debug\ConsoleDungeon.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dungeon.Core", "Dungeon.Core\Dungeon.Core.csproj", "{0B5E6711-D5C4-4113-B8FA-4DC148892D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDungeon", "ConsoleDungeon\ConsoleDungeon.csproj", "{67B5670C-E03E-496E-AE8C-DBCC6CB9D5F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B5E6711-D5C4-4113-B8FA-4DC148892D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5E6711-D5C4-4113-B8FA-4DC148892D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5E6711-D5C4-4113-B8FA-4DC148892D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5E6711-D5C4-4113-B8FA-4DC148892D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B5670C-E03E-496E-AE8C-DBCC6CB9D5F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B5670C-E03E-496E-AE8C-DBCC6CB9D5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B5670C-E03E-496E-AE8C-DBCC6CB9D5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B5670C-E03E-496E-AE8C-DBCC6CB9D5F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EF8B6ED-23B8-4870-89D2-C740F62AB1E0}
+	EndGlobalSection
+EndGlobal

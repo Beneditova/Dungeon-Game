@@ -1,0 +1,12 @@
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\bin\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\bin\Debug\Dungeon.Core.pdb
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.pdb
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\bin\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\bin\Debug\Dungeon.Core.pdb
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.dll
+C:\Users\PC\Desktop\kodar\6th n 7th\Dungeon.Core\Dungeon.Core\obj\Debug\Dungeon.Core.pdb
