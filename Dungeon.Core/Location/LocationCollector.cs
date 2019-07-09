@@ -14,15 +14,17 @@ namespace Dungeon.Core
             {
                Scene = new LocationObject[,]
                {
-                   { LocationObject.Player, LocationObject.Path, LocationObject.Enemy, LocationObject.Path },
+                  { LocationObject.Player, LocationObject.Path, LocationObject.Enemy, LocationObject.Path },
                   { LocationObject.Terrain, LocationObject.Terrain, LocationObject.Path, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Path},
                }
             },
+           
             new Location()
             {
                Scene = new LocationObject[,]
-               { { LocationObject.Player, LocationObject.Path, LocationObject.Path, LocationObject.Terrain },
+               {
+                  { LocationObject.Player, LocationObject.Path, LocationObject.Path, LocationObject.Terrain },
                   { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Path},
                }
