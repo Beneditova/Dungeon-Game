@@ -8,26 +8,26 @@ namespace Dungeon.Core
 {
     public class LocationCollector
     {
-        public List<LocationObject[,]> location = new List<LocationObject[,]>
+        public static List<Location> Location = new List<Location>
         {
-            new LocationObject[,]
+            new Location()
             {
-                 { LocationObject.Player, LocationObject.Path, LocationObject.Enemy, LocationObject.Path },
+               Scene = new LocationObject[,]
+               {
+                   { LocationObject.Player, LocationObject.Path, LocationObject.Enemy, LocationObject.Path },
                   { LocationObject.Terrain, LocationObject.Terrain, LocationObject.Path, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Path},
+               }
             },
-
-            new LocationObject[,]
+            new Location()
             {
-                  { LocationObject.Player, LocationObject.Path, LocationObject.Path, LocationObject.Terrain },
+               Scene = new LocationObject[,]
+               { { LocationObject.Player, LocationObject.Path, LocationObject.Path, LocationObject.Terrain },
                   { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Path},
+               }
             }
         };
-
-
-        
-       
     }
 }
 
