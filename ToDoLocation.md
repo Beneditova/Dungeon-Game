@@ -1,3 +1,4 @@
+3 classes:
 Location
 
 LocationManager
@@ -7,3 +8,9 @@ LocationManager
 
 LocationFactory
   - GenerateLocations
+
+Then:
+Combat=> rise and even each time the hero finds an enemy
+
+
+end;iguess;
