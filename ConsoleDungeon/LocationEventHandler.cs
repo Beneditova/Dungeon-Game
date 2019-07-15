@@ -15,7 +15,7 @@ namespace ConsoleDungeon
             PrintDungeon(args);
         }
 
-        public static void PrintDungeon(GathererPosition playerPosition)
+        public static void PrintDungeon(GathererPosition position)
         {
             Console.Clear();
 
@@ -25,30 +25,36 @@ namespace ConsoleDungeon
 
             string[,] matrix = new string[LocationOne.GetLength(0), LocationOne.GetLength(1)];
 
-            for (int i = 0; i < LocationOne.GetLength(0); i++)
+            string[,] matrix = new string[position.scene.Location[position.scene.Current].Scene.GetLength(0), position.scene.Location[position.scene.Current].Scene.GetLength(1)];
+
+            for (int i = 0; i < position.scene.Location[position.scene.Current].Scene.GetLength(0); i++)
             {
-                for (int j = 0; j < LocationOne.GetLength(1); j++)
+                for (int j = 0; j < position.scene.Location[position.scene.Current].Scene.GetLength(1); j++)
                 {
-                    if (LocationOne[i, j] == LocationObject.Path)
+                    switch (position.scene.Location[position.scene.Current].Scene[i, j])
                     {
-                        matrix[i, j] = "_";
-                    }
-
-                    if (LocationOne[i, j] == LocationObject.Terrain)
-                    {
-                        matrix[i, j] = "=";
-                    }
-
-                    if (LocationOne[i, j] == LocationObject.Enemy)
-                    {
-                        matrix[i, j] = "#";
+                        case LocationObject.Path:
+                            matrix[i, j] = "_";
+                            break;
+                        case LocationObject.Terrain:
+                            matrix[i, j] = "=";
+                            break;
+                        case LocationObject.Entrance:
+                            matrix[i, j] = "(";
+                            break;
+                        case LocationObject.Enemy:
+                            matrix[i, j] = "#";
+                            break;
+                        case LocationObject.Exit:
+                            matrix[i, j] = ")";
+                            break;
                     }
                 }
             }
 
             Console.WriteLine();
 
-            matrix[playerPosition.X, playerPosition.Y] = "$";
+            matrix[position.X, position.Y] = "$";
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
