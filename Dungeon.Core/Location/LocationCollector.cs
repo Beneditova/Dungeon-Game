@@ -28,6 +28,15 @@ namespace Dungeon.Core
                   { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Path},
                }
+            },
+            new Location()
+            {
+               Scene = new LocationObject[,]
+               {
+                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path, LocationObject.Terrain },
+                  { LocationObject.Terrain, LocationObject.Path, LocationObject.Terrain, LocationObject.Terrain },
+                  { LocationObject.Enemy, LocationObject.Path, LocationObject.Path, LocationObject.Exit},
+               }
             }
         };
     }
