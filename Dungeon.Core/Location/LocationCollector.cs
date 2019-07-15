@@ -39,6 +39,39 @@ namespace Dungeon.Core
                }
             }
         };
+        
+        private int currentIndex = 0;
+
+        public int Current
+        {
+            get
+            {
+                return currentIndex;
+            }
+        }
+
+        public bool MoveNext()
+        {
+            if (currentIndex != Location.Count)
+            {
+                currentIndex++;
+            }
+            if (currentIndex < Location.Count)
+            {
+                
+                return true;
+            }
+            else return false;
+        }
+
+        public bool MoveBack()
+        {
+            if (currentIndex != 0)
+            {
+                currentIndex--;
+                return true;
+            }else return false;
+        }
     }
 }
 
