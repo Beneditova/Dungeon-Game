@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace Dungeon.Core
 {
-    class Location
-    {
+   public class Location
+   {
+        private LocationObject[,] scene;
+          
+        public Location()
+        {
+            this.Scene = scene;
+        }
+
+        public LocationObject[,] Scene
+        {
+            get
+            {
+                return scene;
+            }
+            set
+            {
+                scene = value;
+            }
+        }
     }
 }
