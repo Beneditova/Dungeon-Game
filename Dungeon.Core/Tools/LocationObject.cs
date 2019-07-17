@@ -11,6 +11,8 @@ namespace Dungeon.Core
         Path = 0,
         Player = 1,
         Terrain = 3,
-        Enemy = 8
+        Enemy = 8,
+        Exit=4,
+        Entrance = 2
     }
 }
