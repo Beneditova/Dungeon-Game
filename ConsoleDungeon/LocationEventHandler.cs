@@ -1,37 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using Dungeon.Core;
 
 namespace ConsoleDungeon
 {
-    public class LocationEventHandler :  Location, ILocationEventHandler
+    public class LocationEventHandler :  ILocationEventHandler
     {
         public void PlayerMoved(object sender, GathererPosition args)
         {
-            // Console.WriteLine($"Player position is x= {args.X} y= {args.Y}");
             PrintDungeon(args);
         }
 
-        public static void PrintDungeon(GathererPosition position)
+        private static void PrintDungeon(GathererPosition position)
         {
             Console.Clear();
-
+            Console.WriteLine("[Game Controls]");
             Console.WriteLine("^ up");
             Console.WriteLine("left <  > right");
             Console.WriteLine("v down");
 
-            string[,] matrix = new string[LocationOne.GetLength(0), LocationOne.GetLength(1)];
+            string[,] matrix = new string[position.Scene.Location[position.Scene.Current].Scene.GetLength(0), position.Scene.Location[position.Scene.Current].Scene.GetLength(1)];
 
-            string[,] matrix = new string[position.scene.Location[position.scene.Current].Scene.GetLength(0), position.scene.Location[position.scene.Current].Scene.GetLength(1)];
-
-            for (int i = 0; i < position.scene.Location[position.scene.Current].Scene.GetLength(0); i++)
+            for (int i = 0; i < position.Scene.Location[position.Scene.Current].Scene.GetLength(0); i++)
             {
-                for (int j = 0; j < position.scene.Location[position.scene.Current].Scene.GetLength(1); j++)
+                for (int j = 0; j < position.Scene.Location[position.Scene.Current].Scene.GetLength(1); j++)
                 {
-                    switch (position.scene.Location[position.scene.Current].Scene[i, j])
+                    switch (position.Scene.Location[position.Scene.Current].Scene[i, j])
                     {
                         case LocationObject.Path:
                             matrix[i, j] = "_";
@@ -66,6 +59,9 @@ namespace ConsoleDungeon
             }
 
             Console.Write("\n\n");
+            
         }
+       
     }  
 }
+
