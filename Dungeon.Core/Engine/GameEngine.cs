@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dungeon.Core
 {
@@ -13,8 +9,6 @@ namespace Dungeon.Core
         public BaseGatherer Winner { get; private set; }
 
         private IFightNotifiations notifictions;
-
-        public FightReportDelegate DamageReport { get; set; }
 
         public GameEngine(BaseGatherer hero, BaseGatherer enemy, IFightNotifiations notifictions)
         {
@@ -34,7 +28,7 @@ namespace Dungeon.Core
                 int attack = hero.Attack();
                 int damage = enemy.Defend(attack);
 
-                DamageReport?.Invoke(new FightReportArgs()
+                notifictions.FightReport(new FightReportArgs()
                 {
                     Hero = hero,
                     Enemy = enemy,
