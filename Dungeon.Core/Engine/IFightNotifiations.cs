@@ -8,8 +8,6 @@ namespace Dungeon.Core
 {
    public interface IFightNotifiations
    {
-        void FightReport(FightReportArgs args);
+       void FightReport(FightReportArgs args);
    }
-
-    public delegate void FightReportDelegate(FightReportArgs args);
 }
