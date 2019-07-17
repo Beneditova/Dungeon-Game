@@ -40,7 +40,7 @@ namespace Dungeon.Core
             }
         };
         
-        private int currentIndex = 0;
+       private int currentIndex = 0;
 
         public int Current
         {
@@ -52,13 +52,9 @@ namespace Dungeon.Core
 
         public bool MoveNext()
         {
-            if (currentIndex != Location.Count)
+            if (currentIndex != Location.Count-1)
             {
                 currentIndex++;
-            }
-            if (currentIndex < Location.Count)
-            {
-                
                 return true;
             }
             else return false;
@@ -66,11 +62,12 @@ namespace Dungeon.Core
 
         public bool MoveBack()
         {
-            if (currentIndex != 0)
+            if (currentIndex > 0)
             {
                 currentIndex--;
                 return true;
-            }else return false;
+            }
+            return false;
         }
     }
 }
