@@ -34,7 +34,6 @@ namespace ConsoleDungeon
                                 location.MoveUp();
                                 break;
                             }
-                           
                         case DirectionEnum.Down:
                             {
                                 location.MoveDown();
@@ -58,27 +57,14 @@ namespace ConsoleDungeon
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo userInput = Console.ReadKey();
-                    if (userInput.Key == ConsoleKey.LeftArrow)
+                    switch (userInput.Key)
                     {
-                        return DirectionEnum.Left;
+                        case ConsoleKey.LeftArrow: return DirectionEnum.Left;
+                        case ConsoleKey.RightArrow: return DirectionEnum.Right;
+                        case ConsoleKey.UpArrow: return DirectionEnum.Up;
+                        case ConsoleKey.DownArrow: return DirectionEnum.Down;
                     }
-
-                    if (userInput.Key == ConsoleKey.RightArrow)
-                    {
-                        return DirectionEnum.Right;
-                    }
-
-                    if (userInput.Key == ConsoleKey.UpArrow)
-                    {
-                        return DirectionEnum.Up;
-                    }
-
-                    if (userInput.Key == ConsoleKey.DownArrow)
-                    {
-                        return DirectionEnum.Down;
-                    }
-                }
-
+                 }
             }
         }
     }
