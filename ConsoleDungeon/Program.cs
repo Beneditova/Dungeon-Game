@@ -7,6 +7,9 @@ namespace ConsoleDungeon
     {
         static void Main(string[] args)
         {
+            var chooseGatherer = new ChooseGathererView();
+            chooseGatherer.Show();
+           
             var view = new GathererConsoleControls();
             view.Show();
 
