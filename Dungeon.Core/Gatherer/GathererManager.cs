@@ -22,17 +22,7 @@ namespace Dungeon.Core
         {
             if (!y.Equals(maxY - 1))
             {
-                switch (one.Location[one.Current].Scene[x, y + 1])
-                {
-                    case LocationObject.Exit:
-                        one.MoveNext(); break;
-                    case LocationObject.Entrance:
-                        one.MoveBack(); break;
-                    case LocationObject.Enemy:
-                        var fight = new Fight(_fightNotifications);
-                        fight.FightHappend();
-                         break;
-                }
+                Action(x, y + 1);
                
                 if (one.Location[one.Current].Scene[x, y + 1] != LocationObject.Terrain)
                 {
@@ -53,18 +43,7 @@ namespace Dungeon.Core
         {
             if (!y.Equals(0))
             {
-                switch (one.Location[one.Current].Scene[x, y - 1])
-                {
-                    case LocationObject.Exit:
-                        one.MoveNext(); break;
-                    case LocationObject.Entrance:
-                        one.MoveBack(); break;
-                    case LocationObject.Enemy:
-                        var fight = new Fight(_fightNotifications);
-                        fight.FightHappend();
-                        break;
-
-                }
+                Action(x, y - 1);
                
                 if (one.Location[one.Current].Scene[x, y - 1] != LocationObject.Terrain)
                 {
@@ -84,17 +63,7 @@ namespace Dungeon.Core
         {
             if (!x.Equals(0))
             {
-                switch (one.Location[one.Current].Scene[x - 1, y])
-                {
-                    case LocationObject.Exit:
-                        one.MoveNext(); break;
-                    case LocationObject.Entrance:
-                        one.MoveBack(); break;
-                    case LocationObject.Enemy:
-                        var fight = new Fight(_fightNotifications);
-                        fight.FightHappend();
-                        break;
-                }
+                Action(x - 1, y);
 
                 if (one.Location[one.Current].Scene[x - 1, y] != LocationObject.Terrain)
                 {
@@ -114,17 +83,8 @@ namespace Dungeon.Core
         {
             if (x + 1 < maxX)
             {
-                switch (one.Location[one.Current].Scene[x + 1, y])
-                {
-                    case LocationObject.Exit:
-                        one.MoveNext(); break;
-                    case LocationObject.Entrance:
-                        one.MoveBack(); break;
-                    case LocationObject.Enemy:
-                        var fight = new Fight(_fightNotifications);
-                        fight.FightHappend();
-                        break;
-                }
+              
+                Action(x + 1, y);
 
                 if (one.Location[one.Current].Scene[x + 1,y] != LocationObject.Terrain)
                 {
@@ -139,5 +99,20 @@ namespace Dungeon.Core
                 Y = y
             });
         }
+         private void Action (int x,int y)
+         {
+            switch (area.Location[area.Current].Scene[x, y])
+            {
+                case LocationObject.Exit:
+                    area.MoveNext(); break;
+                case LocationObject.Entrance:
+                    area.MoveBack(); break;
+                case LocationObject.Enemy:
+                    var enemy = new EnemyFactory();
+                    var fight = new Fight(_fightNotifiations);
+                   fight.FightHappend(enemy.Enemy[area.Current]);
+                    break;
+            }
+         }
     }
 }
