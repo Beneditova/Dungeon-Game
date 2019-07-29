@@ -9,14 +9,15 @@ namespace Dungeon.Core
 
         static LocationCollector one = new LocationCollector();
 
-        private readonly ILocationEventHandler _locationEventHandler;
-        private readonly IFightNotifiations _fightNotifications;
+         private readonly IFightNotifiations _fightNotifiations;
+         private readonly ILocationEventHandler _locationEventHandler;
 
-        public GathererManager(ILocationEventHandler locationEventHandler, IFightNotifiations fightNotifications)
+        public GathererManager(IFightNotifiations fightNotifiations,  ILocationEventHandler locationEventHandler)
         {
+            this._fightNotifiations = fightNotifiations;
             this._locationEventHandler = locationEventHandler;
-            this._fightNotifications = fightNotifications;
         }
+
 
         public void MoveRight()
         {
