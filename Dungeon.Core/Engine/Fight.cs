@@ -17,15 +17,14 @@ namespace Dungeon.Core
 
         public void FightHappend()
         {
-            var hero = new Warrior(100, 15, 20);
-            var enemy = new Monk(100, 7, 30);
+            var engine = new GameEngine(GathererSettings.Instance.GetHeroType(), enemy, _fightNotifiations);
 
-            var engine = new GameEngine(hero, enemy, _fightNotifiations);
             Console.WriteLine("The fierce battle begins!");
           
             engine.Fight();
-
+            Thread.Sleep(1000);
             Console.WriteLine("Winner is: " + engine.Winner);
+            Thread.Sleep(1000);
         }
     }
 }
