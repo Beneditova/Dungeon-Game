@@ -17,14 +17,15 @@ namespace ConsoleDungeon
             Console.WriteLine("^ up");
             Console.WriteLine("left <  > right");
             Console.WriteLine("v down");
-
-            string[,] matrix = new string[position.Scene.Location[position.Scene.Current].Scene.GetLength(0), position.Scene.Location[position.Scene.Current].Scene.GetLength(1)];
-
-            for (int i = 0; i < position.Scene.Location[position.Scene.Current].Scene.GetLength(0); i++)
+ 
+            int index = position.Scene.Current;
+            string[,] matrix = new string[position.Scene.Location[index].Scene.GetLength(0), position.Scene.Location[index].Scene.GetLength(1)];
+           
+            for (int i = 0; i < position.Scene.Location[index].Scene.GetLength(0); i++)
             {
-                for (int j = 0; j < position.Scene.Location[position.Scene.Current].Scene.GetLength(1); j++)
+                for (int j = 0; j < position.Scene.Location[index].Scene.GetLength(1); j++)
                 {
-                    switch (position.Scene.Location[position.Scene.Current].Scene[i, j])
+                    switch (position.Scene.Location[index].Scene[i, j])
                     {
                         case LocationObject.Path:
                             matrix[i, j] = "_";
