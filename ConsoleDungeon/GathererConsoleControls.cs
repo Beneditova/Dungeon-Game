@@ -11,8 +11,8 @@ namespace ConsoleDungeon
     {
         public void Show()
         {
-            var location = new GathererManager(new LocationEventHandler());
-            while (true)
+            var location = new GathererManager(new FightNotification(), new LocationEventHandler());
+            while (GathererSettings.Instance.GathererClass.IsAlive)
             {
                 DirectionEnum direction = RenderOption();
                 try
