@@ -10,7 +10,7 @@ namespace Dungeon.Core
 {
     public static class LocationReader 
     {
-        public  static void GetLocation()
+        public  static void ImportLocations()
         {
             Location location = new Location();
             LocationObject[,] newLocation = new LocationObject[3, 4];
@@ -41,7 +41,7 @@ namespace Dungeon.Core
                             newLocation[i, j] = LocationObject.Entrance; j++; break;
                         case "]":
                             location.Scene = newLocation;
-                            GathererManager.area.Location.Add(location);
+                            GathererManager.Area.Location.Add(location);
                             newLocation = new LocationObject[3, 4];
                             location = new Location(); break;
                    }

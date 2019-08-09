@@ -6,7 +6,7 @@ namespace Dungeon.Core
     {
         public  int x = 0, y = 0;
 
-        public static  LocationCollector area = new LocationCollector();
+        public static  LocationCollector Area = new LocationCollector();
 
         
         private readonly IFightNotifiations _fightNotifiations;
@@ -20,10 +20,10 @@ namespace Dungeon.Core
 
         public void MoveRight()
         {
-            if (!y.Equals(area.MaxY - 1))
+            if (!y.Equals(Area.MaxY - 1))
             {
                     Action(x, y + 1);
-                    if (area.Location[area.Current].Scene[x, y + 1] != LocationObject.Terrain)
+                    if (Area.Location[Area.Current].Scene[x, y + 1] != LocationObject.Terrain)
                     {
                         y++;
                     }
@@ -31,7 +31,7 @@ namespace Dungeon.Core
 
             this._locationEventHandler.PlayerMoved(this, new GathererPosition
             {
-                Scene = area,
+                Scene = Area,
                 X = x,
                 Y = y
             });
@@ -44,7 +44,7 @@ namespace Dungeon.Core
             {
                 Action(x, y - 1);
 
-                if (area.Location[area.Current].Scene[x, y - 1] != LocationObject.Terrain)
+                if (Area.Location[Area.Current].Scene[x, y - 1] != LocationObject.Terrain)
                 {
                     y--;
                 }
@@ -52,7 +52,7 @@ namespace Dungeon.Core
 
             this._locationEventHandler.PlayerMoved(this, new GathererPosition
             {
-                Scene = area,
+                Scene = Area,
                 X = x,
                 Y = y
             });
@@ -64,7 +64,7 @@ namespace Dungeon.Core
             {
                 Action(x - 1, y);
 
-                if (area.Location[area.Current].Scene[x - 1, y] != LocationObject.Terrain)
+                if (Area.Location[Area.Current].Scene[x - 1, y] != LocationObject.Terrain)
                 {
                    x--;
                 }
@@ -72,7 +72,7 @@ namespace Dungeon.Core
 
             this._locationEventHandler.PlayerMoved(this, new GathererPosition
             {
-                Scene = area,
+                Scene = Area,
                 X = x,
                 Y = y
             });
@@ -80,11 +80,11 @@ namespace Dungeon.Core
 
         public void MoveDown()
         {
-            if (x + 1 < area.MaxX)
+            if (x + 1 < Area.MaxX)
             {
                 Action(x + 1, y);
 
-                if (area.Location[area.Current].Scene[x + 1,y] != LocationObject.Terrain)
+                if (Area.Location[Area.Current].Scene[x + 1,y] != LocationObject.Terrain)
                 {
                    x++;
                 }
@@ -92,7 +92,7 @@ namespace Dungeon.Core
 
             this._locationEventHandler.PlayerMoved(this, new GathererPosition
             {
-                Scene = area,
+                Scene = Area,
                 X = x,
                 Y = y
             });
@@ -100,17 +100,17 @@ namespace Dungeon.Core
 
         private void Action (int x,int y)
         {
-            switch (area.Location[area.Current].Scene[x, y])
+            switch (Area.Location[Area.Current].Scene[x, y])
             {
                 case LocationObject.Exit:
-                    area.MoveNext(); 
+                    Area.MoveNext(); 
                     break;
                 case LocationObject.Entrance:
-                    area.MoveBack(); break;
+                    Area.MoveBack(); break;
                 case LocationObject.Enemy:
                     var enemy = new EnemyFactory();
                     var fight = new Fight(_fightNotifiations);
-                   fight.FightHappend(enemy.Enemy[area.Current]);
+                   fight.FightHappend(enemy.Enemy[Area.Current]);
                     break;
             }
         }
