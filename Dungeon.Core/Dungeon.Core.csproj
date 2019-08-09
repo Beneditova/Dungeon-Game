@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tools\ChooseGatherer.cs" />
-    <Compile Include="EnemyFactory.cs" />
+    <Compile Include="Tools\EnemyFactory.cs" />
     <Compile Include="Engine\Fight.cs" />
     <Compile Include="Gatherer\GathererSettings.cs" />
-    <Compile Include="LocationReader.cs" />
+    <Compile Include="Location\LocationReader.cs" />
     <Compile Include="Location\Location.cs" />
     <Compile Include="Tools\DirectionEnum.cs" />
     <Compile Include="GathererClasses\Mage.cs" />

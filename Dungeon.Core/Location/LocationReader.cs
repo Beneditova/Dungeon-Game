@@ -13,12 +13,12 @@ namespace Dungeon.Core
         public  static void GetLocation()
         {
             Location location = new Location();
-           
+            LocationObject[,] newLocation = new LocationObject[3, 3];
+
             int i = 0, j = 0;
 
-            LocationObject[,] newLocation = new LocationObject[3,3];
-
-            String input = File.ReadAllText("locations.txt");
+           
+            String input = File.ReadAllText("../../../locations.txt");
 
             foreach (var row in input.Split('\n'))
             {
@@ -42,6 +42,8 @@ namespace Dungeon.Core
                             newLocation[i, j] = LocationObject.Entrance; j++; break;
                         case "]":
                             location.Scene = newLocation;
+                            location = new Location();
+                            newLocation = new LocationObject[3, 3];
                             GathererManager.area.Location.Add(location); break;
                    }
                 }
