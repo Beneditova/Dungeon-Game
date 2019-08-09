@@ -25,6 +25,7 @@ namespace ConsoleDungeon
                     case ChooseGatherer.Rogue: GathererSettings.Instance.GathererClass = rogue; break;
                     case ChooseGatherer.Warrior: GathererSettings.Instance.GathererClass = warrior; break;
                 }
+            Console.WriteLine("[Press some arrow key!]");
         }
        
         private ChooseGatherer GathererOption()

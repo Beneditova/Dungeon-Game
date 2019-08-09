@@ -15,18 +15,18 @@ namespace Dungeon.Core
             {
                Scene = new LocationObject[,]
                {
-                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path },
-                  { LocationObject.Terrain, LocationObject.Terrain, LocationObject.Path },
-                  { LocationObject.Path, LocationObject.Path, LocationObject.Exit},
+                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path, LocationObject.Path },
+                  { LocationObject.Terrain, LocationObject.Terrain, LocationObject.Path, LocationObject.Path },
+                  { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Exit},
                }
             },
             new Location()
             {
                Scene = new LocationObject[,]
                {
-                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path},
-                  { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain},
-                  { LocationObject.Path, LocationObject.Path, LocationObject.Exit},
+                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path, LocationObject.Path},
+                  { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Terrain},
+                  { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Exit},
                }
             },
             new Location()
@@ -35,7 +35,7 @@ namespace Dungeon.Core
                {
                   { LocationObject.Entrance, LocationObject.Path, LocationObject.Path,  LocationObject.Path },
                   { LocationObject.Terrain, LocationObject.Path, LocationObject.Terrain,LocationObject.Path },
-                  { LocationObject.Enemy, LocationObject.Path, LocationObject.Exit ,LocationObject.Path },
+                  { LocationObject.Enemy, LocationObject.Path, LocationObject.Path , LocationObject.Exit },
                }
             }
         };
