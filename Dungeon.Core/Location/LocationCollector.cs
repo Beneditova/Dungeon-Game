@@ -15,7 +15,7 @@ namespace Dungeon.Core
             {
                Scene = new LocationObject[,]
                {
-                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path, LocationObject.Path },
+                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Enemy, LocationObject.Path },
                   { LocationObject.Terrain, LocationObject.Terrain, LocationObject.Path, LocationObject.Path },
                   { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Exit},
                }
@@ -24,18 +24,18 @@ namespace Dungeon.Core
             {
                Scene = new LocationObject[,]
                {
-                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path, LocationObject.Path},
-                  { LocationObject.Terrain, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Terrain},
-                  { LocationObject.Path, LocationObject.Path, LocationObject.Path, LocationObject.Exit},
+                  { LocationObject.Entrance, LocationObject.Terrain, LocationObject.Path, LocationObject.Path},
+                  { LocationObject.Path, LocationObject.Enemy, LocationObject.Terrain, LocationObject.Terrain},
+                  { LocationObject.Terrain, LocationObject.Path, LocationObject.Enemy, LocationObject.Exit},
                }
             },
             new Location()
             {
                Scene = new LocationObject[,]
                {
-                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Path,  LocationObject.Path },
+                  { LocationObject.Entrance, LocationObject.Path, LocationObject.Enemy,  LocationObject.Path },
                   { LocationObject.Terrain, LocationObject.Path, LocationObject.Terrain,LocationObject.Path },
-                  { LocationObject.Enemy, LocationObject.Path, LocationObject.Path , LocationObject.Exit },
+                  { LocationObject.Enemy, LocationObject.Path, LocationObject.Enemy , LocationObject.Exit },
                }
             }
         };

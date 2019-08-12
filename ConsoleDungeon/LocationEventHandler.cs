@@ -13,13 +13,14 @@ namespace ConsoleDungeon
         private void PrintDungeon(GathererPosition position)
         {
             Console.Clear();
-
+            int index = position.Scene.Current;
             Console.WriteLine("[Game Controls]");
             Console.WriteLine("^ up");
             Console.WriteLine("left <  > right");
             Console.WriteLine("v down");
+            Console.WriteLine($"[You are in Area {index+1}]");
 
-            int index = position.Scene.Current;
+           
             string[,] matrix = new string[position.Scene.Location[index].Scene.GetLength(0), position.Scene.Location[index].Scene.GetLength(1)];
 
             for (int i = 0; i < position.Scene.Location[index].Scene.GetLength(0); i++)
