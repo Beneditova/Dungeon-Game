@@ -9,5 +9,7 @@ namespace Dungeon.Core
    public interface IFightNotifiations
    {
        void FightReport(FightReportArgs args);
-   }
+
+       void WinnerReport(FightReportArgs args);
+    }
 }

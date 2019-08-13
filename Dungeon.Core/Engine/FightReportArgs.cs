@@ -10,6 +10,7 @@ namespace Dungeon.Core
     {
         public BaseGatherer GathererHero { get; set; }
         public BaseGatherer GathererEnemy { get; set; }
+        public BaseGatherer Winner { get; set; }
 
         public double Attack { get; set; }
         public double DamageRecieved { get; set; }

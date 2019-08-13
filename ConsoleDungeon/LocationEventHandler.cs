@@ -12,8 +12,9 @@ namespace ConsoleDungeon
 
         private void PrintDungeon(GathererPosition position)
         {
-            Console.Clear();
             int index = position.Scene.Current;
+
+            Console.Clear();
             Console.WriteLine("[Game Controls]");
             Console.WriteLine("^ up");
             Console.WriteLine("left <  > right");
