@@ -46,6 +46,7 @@ namespace Dungeon.Core
                             location = new Location(); break;
                    }
                 }
+
                 i++;
             }
         }

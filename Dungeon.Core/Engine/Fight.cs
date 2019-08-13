@@ -21,11 +21,9 @@ namespace Dungeon.Core
         {
             var engine = new GameEngine(GathererSettings.Instance.GetHeroType(), enemy, _fightNotifiations);
 
-            Console.WriteLine("Battle begins!");
-          
             engine.Fight();
             Thread.Sleep(1000);
-           // Console.WriteLine("Winner is: " + engine.Winner);
+
             _fightNotifiations.WinnerReport(new FightReportArgs()
             {
                 Winner = engine.Winner

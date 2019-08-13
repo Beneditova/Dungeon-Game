@@ -14,9 +14,9 @@ namespace ConsoleDungeon
             Console.WriteLine(($"{args.GathererHero} hit {args.GathererEnemy} for {args.Attack} and scored {args.DamageRecieved}."));
        }
 
-        public void WinnerReport(FightReportArgs args)
-        {
-            Console.WriteLine($"Winner is: {args.Winner}");
-        }
+       public void WinnerReport(FightReportArgs args)
+       {
+           Console.WriteLine($"Winner is: {args.Winner}");
+       }
     }
 }

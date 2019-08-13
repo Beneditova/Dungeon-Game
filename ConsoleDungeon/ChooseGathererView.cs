@@ -15,16 +15,15 @@ namespace ConsoleDungeon
             var mage = new Mage(100, 10, 10); 
             var rogue = new Rogue(100, 10, 10); 
             var warrior = new Warrior(200, 10, 20);
-           
 
             ChooseGatherer gatherer =  GathererOption();
-                switch (gatherer)
-                {
-                    case ChooseGatherer.Monk: GathererSettings.Instance.GathererClass = monk; break;
-                    case ChooseGatherer.Mage: GathererSettings.Instance.GathererClass = mage;  break;
-                    case ChooseGatherer.Rogue: GathererSettings.Instance.GathererClass = rogue; break;
-                    case ChooseGatherer.Warrior: GathererSettings.Instance.GathererClass = warrior; break;
-                }
+            switch (gatherer)
+            {
+                case ChooseGatherer.Monk: GathererSettings.Instance.GathererClass = monk; break;
+                case ChooseGatherer.Mage: GathererSettings.Instance.GathererClass = mage;  break;
+                case ChooseGatherer.Rogue: GathererSettings.Instance.GathererClass = rogue; break;
+                case ChooseGatherer.Warrior: GathererSettings.Instance.GathererClass = warrior; break;
+            }
             Console.WriteLine("[Press some arrow key!]");
         }
        

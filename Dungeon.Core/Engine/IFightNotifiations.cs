@@ -11,5 +11,5 @@ namespace Dungeon.Core
        void FightReport(FightReportArgs args);
 
        void WinnerReport(FightReportArgs args);
-    }
+   }
 }

@@ -17,32 +17,30 @@ namespace ConsoleDungeon
             {
                 DirectionEnum direction = RenderOption();
                
-                    switch (direction)
-                    {
-                        case DirectionEnum.Right:
-                            {
-                                location.MoveRight();
-                                break;
-                            }
+                   switch (direction)
+                   {
+                       case DirectionEnum.Right:
+                        {
+                            location.MoveRight();
+                            break;
+                        }
                         case DirectionEnum.Left:
-                            {
-                                location.MoveLeft();
-                                break;
-                            }
+                        {
+                            location.MoveLeft();
+                            break;
+                        }
                         case DirectionEnum.Up:
-                            {
-                                location.MoveUp();
-                                break;
-                            }
+                        {
+                            location.MoveUp();
+                            break;
+                        }
                         case DirectionEnum.Down:
-                            {
-                                location.MoveDown();
-                                break;
-                            }
-                    }
-                }
-              
-            
+                        {
+                            location.MoveDown();
+                            break;
+                        }
+                   }
+            }
 
             Console.WriteLine("You Have Died, Sorry Mate");
         }
@@ -53,15 +51,15 @@ namespace ConsoleDungeon
             {
                 if (Console.KeyAvailable)
                 {
-                    ConsoleKeyInfo userInput = Console.ReadKey();
-                    switch (userInput.Key)
-                    {
+                   ConsoleKeyInfo userInput = Console.ReadKey();
+                   switch (userInput.Key)
+                   {
                         case ConsoleKey.LeftArrow: return DirectionEnum.Left;
                         case ConsoleKey.RightArrow: return DirectionEnum.Right;
                         case ConsoleKey.UpArrow: return DirectionEnum.Up;
                         case ConsoleKey.DownArrow: return DirectionEnum.Down;
-                    }
-                 }
+                   }
+                }
             }
         }
     }
