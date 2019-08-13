@@ -10,7 +10,6 @@ namespace Dungeon.Core
     public class Fight
     {
         private IFightNotifiations _fightNotifiations;
-     
 
         public Fight(IFightNotifiations fightNotifiations)
         {
@@ -22,8 +21,8 @@ namespace Dungeon.Core
             var engine = new GameEngine(GathererSettings.Instance.GetHeroType(), enemy, _fightNotifiations);
 
             engine.Fight();
-            Thread.Sleep(1000);
 
+            Thread.Sleep(100);
             _fightNotifiations.WinnerReport(new FightReportArgs()
             {
                 Winner = engine.Winner
